@@ -1,10 +1,16 @@
 <template>
 <div class="bg-gray-200 h-screen h-full overflow-y-auto">
   <app-header @artistSearch="fetchArtists"></app-header>
-  <app-selected-track
-    @previewClosed="closePreview($event)"
-    v-if="isTrackSelected"
-    :track="track"></app-selected-track>
+  <transition
+    enter-active-class="animated fadeIn"
+    leave-active-class="animated zoomOut"
+    appear
+  >
+    <app-selected-track
+      @previewClosed="closePreview($event)"
+      v-if="isTrackSelected"
+      :track="track"></app-selected-track>
+  </transition>
   <app-track-list :tracks="tracks" @trackSelected="selectTrack"></app-track-list>
 </div>
 </template>
