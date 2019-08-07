@@ -85,7 +85,6 @@ export default {
         duration = this.$refs.previewAudio.duration;
 
         this.progress = (currentTime/duration) * 100;
-        console.log('timeupdate', (currentTime/duration) * 100);
       }
     }
   },
