@@ -35,7 +35,18 @@ export default {
     fetchArtists(artist) {
       axios.get(`https://itunes.apple.com/search?term=${artist}&entity=musicTrack&media=music&callback=`)
         .then(response => {
-          this.tracks = response.data.results;
+          let items = response.data.results;
+
+          const sortByReleaseDate = items.sort(function(a, b) {
+            let itemA = new Date(a.releaseDate);
+            let itemB = new Date(b.releaseDate);
+
+            if (itemA < itemB) return -1;
+            if (itemB < itemA) return 1;
+            return 0;
+          });
+
+          this.tracks = sortByReleaseDate;
         })
         .catch(e => {
           console.log('error', e);

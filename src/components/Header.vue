@@ -18,7 +18,7 @@
             aria-describedby="search-button"
             />
           <button
-            class="h-12 flex-shrink-0 bg-indigo-400 hover:bg-indigo-500 border-indigo-400 hover:border-indigo-500 text-sm border-4 text-white py-1 px-2 rounded"
+            class="h-12 flex-shrink-0 bg-indigo-400 hover:bg-indigo-500 border-indigo-400 hover:border-indigo-500 focus:outline-none text-sm border-4 text-white py-1 px-2 rounded"
             @click="searchArtist"
             id="search-button"
             type="button">
