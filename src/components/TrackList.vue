@@ -3,8 +3,8 @@
   <div class="tracks flex w-11/12 mx-auto p-3">
       <transition-group class="flex flex-wrap pt-2 w-full" name="slide">
         <div
-          class="w-1/2 px-2 mb-4"
-          v-for="(track, index) in tracks" :key="index"
+          class="lg:w-1/2 w-full px-2 mb-4"
+          v-for="(track, index) in tracks" :key="index + 1"
           @click="selectTrack(track)"
         >
           <div class="bg-white flex min-h-0 px-4 py-3 rounded-lg hover:shadow-lg cursor-pointer">
@@ -50,17 +50,12 @@ export default {
 
 <style>
     .slide-enter {
-        /* transform: translateY(20px); */
         opacity: 0;
     }
 
     .slide-enter-active {
         animation: slide-in 1s ease-out forwards;
         transition: opacity .5s;
-    }
-
-    .slide-leave {
-
     }
 
     .slide-leave-active {

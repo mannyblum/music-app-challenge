@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap">
-    <div class="relative w-1/3 ml-auto mr-auto bg-white py-3 px-4 rounded shadow-xl">
+    <div class="relative lg:w-1/3 w-2/3 ml-auto mr-auto bg-white py-3 px-4 rounded shadow-xl">
       <span class="absolute top-0 right-0 px-1 py-1"
         @click="closePreview"
       >
